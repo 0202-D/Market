@@ -7,7 +7,7 @@ import java.util.Map;
 public interface Storage {
     void put(Product product);
 
-    void delete(Product prouct);
+    void delete(Product product);
 
     void showProducts();
 
