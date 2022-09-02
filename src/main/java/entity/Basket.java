@@ -35,7 +35,7 @@ public class Basket {
     public void showProducts() {
         for (Map.Entry<Product, Integer> entry : basket.entrySet()
         ) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getKey() + "Quantity : " + entry.getValue());
         }
     }
 

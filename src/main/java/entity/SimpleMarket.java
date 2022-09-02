@@ -38,20 +38,20 @@ public class SimpleMarket extends Market {
             switch (choice) {
                 case 1:
                     System.out.println("ShowAllProducts - 1");
-                    System.out.println("Show products by rating - 2");
-                    System.out.println("Show products by price - 3");
+                    System.out.println("Show products limited by rating - 2");
+                    System.out.println("Show products limited by price - 3");
                     choice = getChoice();
                     switch (choice) {
                         case 1:
                             storage.showProducts();
                             break;
                         case 2:
-                            System.out.println("enter rating ");
+                            System.out.println("Enter the lower limit of the rating ");
                             choice = getChoice();
                             showRoom.showByRating(storage, choice);
                             break;
                         case 3:
-                            System.out.println("enter price ");
+                            System.out.println("Enter the upper limit of the price ");
                             choice = getChoice();
                             showRoom.showByPrice(storage, choice);
                             break;
@@ -68,7 +68,7 @@ public class SimpleMarket extends Market {
                 case 3:
                     System.out.println(" Your basket :");
                     basket.showProducts();
-                    System.out.println("You need to pay : " + basket.countSum());
+                    System.out.println("You need to pay : " + basket.countSum()+" rub");
                     purchaseCompleted = true;
                     break;
             }
