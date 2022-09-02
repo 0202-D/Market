@@ -12,7 +12,7 @@ public class ShowRoom implements ShowRoomByRating, ShowRoomByPrice {
 
     @Override
     public void showByPrice(Storage storage, int price) {
-        storage.getAllProducts().entrySet().stream().filter(el -> el.getKey().getPrice() >= price)
+        storage.getAllProducts().entrySet().stream().filter(el -> el.getKey().getPrice() <= price)
                 .forEach(el -> System.out.println(el.getKey() + "  Quantity in storage -" + el.getValue()));
     }
 }
