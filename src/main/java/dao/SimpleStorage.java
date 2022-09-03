@@ -45,7 +45,7 @@ public class SimpleStorage implements Storage {
     public void showProducts() {
         for (Map.Entry<Product, Integer> entry : storage.entrySet()
         ) {
-            System.out.println(entry.getKey() + " " + entry.getValue());
+            System.out.println(entry.getKey() + " Quantity - " + entry.getValue());
         }
     }
 

@@ -1,4 +1,3 @@
-import dao.SimpleStorage;
 import entity.Market;
 import entity.SimpleMarket;
 

@@ -55,6 +55,8 @@ public class SimpleMarket extends Market {
                             choice = getChoice();
                             showRoom.showByPrice(storage, choice);
                             break;
+                        default:
+                            System.out.println("No such this feature");
                     }
                     System.out.println("*********************************************************8");
                     break;
@@ -71,9 +73,11 @@ public class SimpleMarket extends Market {
                     System.out.println("You need to pay : " + basket.countSum()+" rub");
                     purchaseCompleted = true;
                     break;
+                default:
+                    System.out.println("No such this feature");
             }
             if (purchaseCompleted) {
-                System.out.println("Thank you ... You will receive a link to the payment . Pay within 40 minutes goodbye");
+                System.out.println("Thank you ... You will receive a link to the payment . Pay within 40 minutes, goodbye");
                 break;
             }
 
@@ -81,11 +85,11 @@ public class SimpleMarket extends Market {
     }
 
     private int getChoice() {
-        int choice;
+        int choice = -1;
         try {
             choice = Integer.parseInt(sc.nextLine());
         } catch (RuntimeException e) {
-            throw new RuntimeException("Wrong input");
+            System.out.println("Wrong input");
         }
         return choice;
     }
